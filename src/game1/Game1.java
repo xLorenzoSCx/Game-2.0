@@ -26,7 +26,11 @@ public class Game1 {
         nome = teclado.next();
         System.out.println("Deseja começar o jogo de advinhação?(1) para sim e (2) para não");
         resposta = teclado.nextInt();
-
+        
+if(resposta==1){
+    System.out.println("Insira sua aposta");
+    int aposta;
+    aposta = teclado.nextInt();
         int tentativas = 0, soma = 0, tentAcerto = 0;
         boolean acertou = false;
 
@@ -51,7 +55,7 @@ public class Game1 {
                     } else {
                         acertou = true;
                         tentAcerto += 1;
-                        soma = mult * (tentAcerto * 1000);
+                        soma = mult * (tentAcerto * aposta);
                         System.out.println("Parabéns! Você acertou em " + tentativas + " tentativas." + "Seu prêmio é de " + soma + " reais");
 
                     }
@@ -70,4 +74,4 @@ public class Game1 {
         
 
     }
-}
+}}
